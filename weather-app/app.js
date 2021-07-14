@@ -4,6 +4,6 @@ const url = 'http://api.weatherstack.com/current?access_key=2cb72b90348af8a69619
 
 request ({url: url, json: true}, (error, response) => {
     //console.log(response.body.current)
-    console.log('In ' + response.body.location.name + 'is' response.body.current.weather_descriptions[0] + '. A ' + ' al momento ci sono ' + response.body.current.temperature + ' gradi')
+    console.log('In ' + response.body.location.name + ' is ' + response.body.current.weather_descriptions[0] + '. There are ' + response.body.current.temperature + ' degree')
 })
 
