@@ -29,7 +29,8 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About Me',
+        title: 'About',
+        info: 'This application was built with Node JS and express.',
         name: 'Stefano Volpatti'
     })
 })
@@ -37,7 +38,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help Section',
-        text: 'Need help? Click here',
+        text: 'Need help? Check out the source code',
         name: 'Stefano Volpatti'
     })
 })
