@@ -30,7 +30,7 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About',
-        info: 'This application was built with Node JS and express. It uses data from mapbox.com and weatherstack.com',
+        info: 'This application was built with Node JS and express. It uses data from two API: mapbox.com and weatherstack.com',
         name: 'Stefano Volpatti'
     })
 })
