@@ -1,34 +1,48 @@
 // CRUD    : Create, Read, Update, Delete
 
-const { MongoClient, ObjectId } = require('mongodb')
+const { MongoClient, ObjectId} = require("mongodb");
 
-const connectionURL = 'mongodb://127.0.0.1:27017'
-const databaseName = 'task-manager'
+const connectionURL = "mongodb://127.0.0.1:27017";
+const databaseName = "task-manager";
 
-MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) => {
+MongoClient.connect(
+  connectionURL,
+  { useNewUrlParser: true },
+  (error, client) => {
     if (error) {
-        return console.log('Unable to connect to database!')
+      return console.log("Unable to connect to database!");
     }
 
-    const db = client.db(databaseName)
-    
-    db.collection('users').findOne({ _id: new ObjectId("60ffcb3a66bf552f60b22db2") }, (error, user) => {
-        if (error) {
-            return console.log('Unable to fetch')
+    const db = client.db(databaseName);
+
+    db.collection('users').updateOne({
+        _id: new ObjectId("60ffcb3a66bf552f60b22db2")
+    }, {
+        $inc: {
+            age: 1
         }
-
-        console.log(user)
+    }).then((result) => {
+        console.log(result)
+    }).catch((error) => {
+        console.log(error)
     })
 
-    db.collection('users').find({ age: 30 }).toArray((error, users) => {
-        console.log(users)
-    })
-
-    db.collection('tasks').findOne({ _id: new ObjectId("5c0fec243ef6bdfbe1d62e2f") }, (error, task) => {
-        console.log(task)
-    })
-
-    db.collection('tasks').find({ completed: false }).toArray((error, tasks) => {
-        console.log(tasks)
-    })
-})
+    db.collection("tasks")
+      .updateMany(
+        {
+          completed: false,
+        },
+        {
+          $set: {
+            completed: true,
+          },
+        }
+      )
+      .then((result) => {
+        console.log(result.modifiedCount);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+);
