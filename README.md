@@ -1,7 +1,7 @@
 # NodeJS
 
 
-Here you can find the source code about the course of NodeJS and the Weather Application.
+Here you can find the source code about the course of NodeJS and the Weather Application. 🌦
 
 ## Installation
 
