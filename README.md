@@ -1,6 +1,6 @@
 # NodeJS
 
-[![Heroku](http://heroku-badge.herokuapp.com/?app=angularjs-crypto&style=flat&svg=1&root=index.html)]
+![Heroku](http://heroku-badge.herokuapp.com/?app=angularjs-crypto&style=flat&svg=1&root=index.html)
 
 [weather-application](https://volpatti-weather-application.herokuapp.com)
 
