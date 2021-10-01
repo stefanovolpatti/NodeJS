@@ -38,7 +38,8 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help Section',
-        text: 'Need help? Check out the source code',
+        text: 'Need help?',
+        textSecond: 'Check out the source code',
         name: 'Stefano Volpatti'
     })
 })

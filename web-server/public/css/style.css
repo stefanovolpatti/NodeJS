@@ -17,6 +17,9 @@ body {
     color: white;
     text-decoration: none;
 }
+.repo-link:hover {
+    color: rgb(135, 57, 249);
+}
 footer {
     color: #888888;
     border-top: 1px solid #eeeeee;
@@ -26,6 +29,10 @@ footer {
 footer a {
     color: white;
     margin: 6px;
+    text-decoration: none;
+}
+footer a:first-child:hover {
+    color: rgb(135, 57, 249);
 }
 footer a:hover {
     color: white;
