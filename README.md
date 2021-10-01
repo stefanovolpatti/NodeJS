@@ -23,7 +23,7 @@ Then, follow this instructions:
         
 3. To start the server in local, launch:
        
-       npm start
+       nodemon web-server/src/app.js -e js,hbs
 
 Finish! Enjoy it :rocket:
 
