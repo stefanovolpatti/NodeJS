@@ -16,7 +16,7 @@ First, make sure you have install already Node in your laptop. In other case, fo
 
 Then, follow this instructions:
 
-1. Download or clone the folder and open it in your editor
+1. Download or Clone the folder and open it in your editor
 2. Open the command line and download all dependencies with:
     
        npm install
